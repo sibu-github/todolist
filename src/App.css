@@ -26,13 +26,12 @@
 .tab button {
   background-color: inherit;
   width: 130px;
-  float: left;
   border: none;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 16px;
   border-bottom: 3px solid  #f1f1f1;
 }
 
@@ -47,16 +46,25 @@
 
 
 
-
-
-/* .fade-appear {
-  opacity: 0.01;
+.fade-appear {
+  left: 60px;
 }
 
 .fade-appear.fade-appear-active {
-  opacity: 1;
-  transition: opacity 1000ms ease-in;
-} */
+  left: 0px;
+  transition: all 500ms ease-in;
+}
+
+
+
+.fade-enter {
+  left: 60px;
+}
+
+.fade-enter.fade-enter-active {
+  left: 0px;
+  transition: all 500ms ease-in;
+}
 
 .fade-exit {
   opacity: 1;
@@ -68,7 +76,26 @@
   opacity: 0;
   left: 60px;
   border-left: 60px solid #388E3C;
-  transition: all 800ms ease-out;
+  transition: all 500ms ease-out;
+}
+
+
+.fade-reverse-exit {
+  opacity: 1;
+  right: 0px;
+  border-right: 0px;
+}
+
+.fade-reverse-exit.fade-reverse-exit-active {
+  opacity: 0;
+  right: 60px;
+  border-right: 60px solid #F4511E;
+  transition: all 500ms ease-out;
+}
+
+.message {
+  display: inline-block;
+  text-align: center;
 }
 
 
@@ -160,6 +187,20 @@
   width: 12px;
 }
 
+.round.reverse label:after{
+  content: "X";
+  position: absolute;
+  top: 4px;
+  left: 9px;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  transform: rotate(0deg);
+}
+
+
+
+
 .round input[type="checkbox"] {
   visibility: hidden;
 }
@@ -168,6 +209,12 @@
   background-color: #43A047;
   border-color: #43A047;
 }
+
+.round.reverse input[type="checkbox"]:hover + label {
+  background-color: #F4511E;
+  border-color: #F4511E;
+}
+
 
 .round input[type="checkbox"]:hover + label:after {
   opacity: 1;
