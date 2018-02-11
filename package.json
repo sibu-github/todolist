@@ -2,8 +2,11 @@
   "name": "todolist",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:9001",
   "dependencies": {
+    "express": "^4.16.2",
     "moment": "^2.20.1",
+    "mongodb": "^2.2.33",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.0",
