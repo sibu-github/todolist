@@ -90,6 +90,17 @@ const ShowCompletedTask = (props)=>{
 }
 
 
+const ShowButton = (props)=>{
+  return(
+    <div className="button-effect">
+    <a className="effect effect-4" href="#" title="Learn More">Add New Task</a>
+    </div>
+  )
+}
+
+
+
+
 
 class App extends Component {
   constructor(props) {
@@ -161,6 +172,9 @@ class App extends Component {
           tasks={this.state.tasks}
           tabStatus={this.state.tabStatus}
           onMarkPending={this.onMarkPending} /> :false }
+        <br />
+        {this.state.tabStatus === 'Pending' ? 
+        <ShowButton /> : false }
       </div>
     );
   }
